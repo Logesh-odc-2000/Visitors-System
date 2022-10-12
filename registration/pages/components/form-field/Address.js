@@ -1,18 +1,26 @@
 import React from 'react'
+import {useField} from 'formik'
 
+
+const MyTextField = ({ label, ...props }) => {
+  const [field, meta, helpers] = useField(props);
+  return (
+      <>
+          <label>
+              {label}
+              <input {...field} {...props} />
+          </label>
+          {meta.touched && meta.error ? (
+              <div className="error">{meta.error}</div>
+          ) : null}
+      </>
+  );
+};
 export default function Address() {
   return (
     <div>
-                <label htmlFor="password" className="block text-sm font-bold font-medium">
-                  Address
-                </label>
-                <div className="mt-1">
-                  <textarea
-                    autoComplete="off"
-                    required
-                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 sm:text-sm"
-                  />
-                </div>
+              <MyTextField name="address" component="textarea" label="Address" row='4'
+              className="block w-full  appearance-none rounded-md border border-gray-300 px-3 py-10 placeholder-gray-400 sm:text-sm"/>
               </div>
   )
 }

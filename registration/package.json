@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@progress/kendo-react-inputs": "^5.8.0",
+    "formik": "^2.2.9",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
