@@ -3,7 +3,7 @@ import React from 'react'
 export default function Mobile() {
   return (
     <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-medium font-bold ">
                   Mobile
                 </label>
                 <div className="mt-1">
@@ -13,7 +13,7 @@ export default function Mobile() {
                     type="tel"
                     autoComplete="off"
                     required
-                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 sm:text-sm"
+                    className="block w-full appearance-none rounded-md border border-gray-300 px-3 bg-white py-2 placeholder-gray-400 sm:text-sm"
                   />
                 </div>
               </div>

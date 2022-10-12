@@ -3,8 +3,8 @@ import React from 'react'
 export default function Email() {
   return (
     <div>
-    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-      Email address
+    <label htmlFor="email" className="block text-sm font-medium font-bold ">
+      Email 
     </label>
     <div className="mt-1">
       <input

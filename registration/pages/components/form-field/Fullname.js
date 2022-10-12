@@ -3,7 +3,7 @@ import React from 'react'
 export default function Fullname() {
   return (
     <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-medium font-bold ">
                   Fullname
                 </label>
                 <div className="mt-1">

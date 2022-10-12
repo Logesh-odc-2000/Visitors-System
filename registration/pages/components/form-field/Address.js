@@ -3,7 +3,7 @@ import React from 'react'
 export default function Address() {
   return (
     <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-bold font-medium">
                   Address
                 </label>
                 <div className="mt-1">
