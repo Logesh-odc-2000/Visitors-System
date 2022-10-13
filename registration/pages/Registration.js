@@ -3,6 +3,7 @@ import Fullname from "./components/form-field/Fullname";
 import Mobile from "./components/form-field/Mobile";
 import Address from './components/form-field/Address'
 import { Formik, Form } from 'formik'
+import {validschema} from './Validation'
 
 
 export default function Example() {
@@ -20,11 +21,20 @@ export default function Example() {
               className="space-y-6"
               initialValues={{
                 fullname: '',
-                firstName: '',
-                lastName: '',
+                mobile: '',
+                email: '',
+                address:''
+              }}
+              validationSchema={validschema}
+              onSubmit={(values, actions) => {
+                setTimeout(() => {
+                  alert(JSON.stringify(values, null, 2));
+                  actions.setSubmitting(false);
+                }, 1000);
               }}
             >
               {({ Values }) => (
+                
                 <Form>
                   <Fullname /><br />
                   <Mobile /><br />
@@ -32,7 +42,7 @@ export default function Example() {
                   <Address />
                   <br />
                   <div className="py-10">
-                    <button className="flex w-full justify-center rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" type="submit">Submit</button>
+                    <button className="flex w-full justify-center rounded-md border  bg-black py-2 px-4 text-sm font-medium text-white " type="submit">Submit</button>
                   </div>
                 </Form>
               )}

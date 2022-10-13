@@ -19,7 +19,7 @@ const MyTextField = ({ label, ...props }) => {
 export default function Fullname() {
   return (
     <div>
-      <MyTextField name="fullname" type="text" label="FullName"
+      <MyTextField name="fullname" type="text" label="FullName" autoomplete='off'
         className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 sm:text-sm" />
     </div>
   )
