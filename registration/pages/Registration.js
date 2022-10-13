@@ -15,19 +15,13 @@ export default function Example() {
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className=" bg-green-200 py-12 px-4  shadow sm:rounded-lg sm:px-10">
+          <div className=" bg-gray-200 py-12 px-4  shadow sm:rounded-lg sm:px-10">
             <Formik
               className="space-y-6"
               initialValues={{
                 fullname: '',
                 firstName: '',
                 lastName: '',
-              }}
-              onSubmit={(values, actions) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  actions.setSubmitting(false);
-                }, 1000);
               }}
             >
               {({ Values }) => (
