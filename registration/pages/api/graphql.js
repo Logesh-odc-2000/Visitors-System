@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     await apolloServer.createHandler({
         path: "/api/graphql",
     })(req, res);
-
+ 
     if (!fs.existsSync(gqlSchemaFile)) {
         // Generate 'schema.graphql'
         console.log(`Generate 'schema.graphql'...`);
